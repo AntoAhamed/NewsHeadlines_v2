@@ -14,7 +14,7 @@ function App() {
         <LoadingBar height={3} color='red' progress={progress} />
         <Routes>
           <Route path="/" element={<Navbar />}>
-            <Route index element={<News setProgress={setProgress} Key="general" category="general" />} />
+            <Route index element={<News setProgress={setProgress} />} />
             <Route exact path="business" element={<News setProgress={setProgress} Key="business" category="business" />} />
             <Route exact path="entertainment" element={<News setProgress={setProgress} Key="entertainment" category="entertainment" />} />
             <Route exact path="general" element={<News setProgress={setProgress} Key="general" category="general" />} />
