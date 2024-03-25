@@ -9,6 +9,7 @@ function News(props) {
     const [loading, setLoading] = useState(false);
     const [page, setPage] = useState(1);
     const [totalResults, setTotalResults] = useState(0);
+    const category = props.category;
 
     document.title = `NewsHeadlines_v2 - ${props.category.charAt(0).toUpperCase() + props.category.slice(1)}`;
 
@@ -28,7 +29,7 @@ function News(props) {
 
     useEffect(() => {
         updateNews();
-    }, []);
+    }, [category]);
 
     //const handlePrevClick = () => {
     //    setPage(page - 1);
